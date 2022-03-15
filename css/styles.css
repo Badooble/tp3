@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @author Jeremi Savard 2111653@csfoy.ca
  *
  * TABLE DES MATIERES
  * Normalize
@@ -27,7 +27,16 @@
 
 /* Charte typographique
    ========================================================================== */
- 
+   @media (min-width: 600px){
+h1, .h1 {
+    font-size: 4rem;
+}
+   }
+   
+   h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+      font-family: NewsCycle-bold, sans-serif;
+      margin: 0px;
+  }
 
 /* Grille
    ========================================================================== */
@@ -35,4 +44,243 @@
 
 /* Mise en page
    ========================================================================== */
- 
+:root {
+   --padding-text: 1rem;
+   --couleur-principale: #93c9b7;
+   --couleur-secondaire: #b9dfc3;
+   --couleur-tertiaire: #fbffea;
+  }
+
+  *, *::before, *::after {
+   box-sizing: inherit;
+}
+
+ body {
+    background-color: var(--couleur-secondaire);
+    background-image: linear-gradient(var(--couleur-principale) 10%,var(--couleur-secondaire) 15%,var(--couleur-tertiaire));
+}
+
+img {
+   max-width: 100%;
+   display: block;
+   border-style: none;
+   justify-content: center;
+}
+
+.entete{
+   justify-content: center;
+   max-width: 100%;
+}
+
+.conteneur {
+   box-shadow: 5px 10px 18px #888;
+}
+
+@media (min-width: 600px){
+.conteneur {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 0;
+   }
+}
+
+
+
+.titre{
+    max-width: 100%;
+ }
+
+ main {
+   background-color: white;
+   padding-top: 2rem;
+}
+
+h1 {
+   width: 100%;
+   padding: var(--padding-text);
+   margin-bottom: 0;
+}
+
+
+ @media(min-width:600px){
+    .rangee{
+       display: flex;
+       justify-content: space-between;
+       align-items: stretch;
+       flex-wrap: wrap;
+    }
+ }
+
+ legend {
+   box-sizing: border-box;
+   color: inherit;
+   display: table;
+   max-width: 100%;
+   padding: 0;
+   white-space: normal;
+   padding: 0 0.5rem;
+   font-family: NewsCycle-bold,sans-serif;
+}
+
+ .intro {
+   background-color: rgba(255,255,255,0.6);
+   padding: var(--padding-text);
+   border-radius: 1rem;
+}
+
+.fConcours {
+   position: relative;
+   top: -3rem;
+}
+
+@media (min-width: 600px){
+.cols_8_de_12 {
+    flex-basis: 66%;
+}
+}
+
+aside{
+   display: block;
+   max-width: 25%;
+}
+
+@media (min-width: 600px){
+.cols_4_de_12 {
+    flex-basis: 32%;
+   }
+}
+
+.page{
+   display: flex;
+}
+
+p {
+   display: block;
+   margin-block-start: 1em;
+   margin-block-end: 1em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+}
+
+fieldset {
+   border: 0;
+   background-color: #ececec;
+   padding-top: 3rem;
+   border-radius: 1rem;
+   padding: 0.35em 0.75em 0.625em
+}
+
+fieldset fieldset {
+   border: 2px groove #000;
+   padding: 0.35em 0.75em 0.625em;
+}
+
+fieldset h2 {
+   position: relative;
+   top: 2.25rem;
+}
+
+.ctnValidation {
+   margin: 1.5rem 0;
+}
+
+.telephone .rangee {
+   align-items: flex-end;
+}
+
+.nomcomplet .rangee {
+   display: flex;
+   justify-content: space-between;
+   align-items: stretch;
+   flex-wrap: wrap;
+}
+
+
+ input[type=text], input[type=email],
+ input[type=tel],input[type=number], select{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+ }
+
+ button, input {
+   overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+   font-family: inherit;
+   font-size: 100%;
+   line-height: 1.15;
+   margin: 0;
+}
+
+/*telephone*/
+
+.telephone p:nth-of-type(2) {
+   text-align: center;
+}
+.telephone .cols_1_de_12 {
+   flex-basis: 6.5%;
+}
+.ctnValidation p {
+   margin: 0.5rem 0;
+}
+.tiret {
+   font-family: NewsCycle-bold,sans-serif;
+   padding: 0.5rem;
+}
+@media (min-width: 600px){
+.cols_1_de_12 {
+   flex-basis: 6.5%;
+}
+}
+ /*boutons radio*/
+
+ [type=radio] + label{
+    border: 1px solid transparent;
+    display: inline-block;
+    padding: 0.25rem;
+ }
+
+ [type=radio]:hover+label img{
+   filter: grayscale(0);
+}
+ [type=radio]:hover+label img{
+   filter: grayscale(1);
+}
+
+
+
+ @media(min-width:600px){
+    .cols_4_de_12{
+       width: 32%;
+    }
+ }
+
+ .visuallyHidden{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+ }
+
+ img{
+    max-width: 100;
+    display: block;
+ }
+
+ :focus{
+    outline: #349194 auto 5px;
+ }
+
+ .copyright {
+    text-align: center;
+ }
+
+ .footer{
+   text-align: center;
+ }
