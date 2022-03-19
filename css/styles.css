@@ -19,15 +19,12 @@
 
 /* Normalize
    ========================================================================== */
-@import url(_normalize.css);
-
-/* Utilitaires
-   ========================================================================== */
- 
+@import url(normalize.css);
 
 /* Charte typographique
    ========================================================================== */
-   @media (min-width: 600px){
+@import "typo.css";
+@media (min-width: 600px){
 h1, .h1 {
     font-size: 4rem;
 }
@@ -38,11 +35,7 @@ h1, .h1 {
       margin: 0px;
   }
 
-/* Grille
-   ========================================================================== */
- 
-
-/* Mise en page
+/* Utilitaires
    ========================================================================== */
 :root {
    --padding-text: 1rem;
@@ -54,6 +47,14 @@ h1, .h1 {
   *, *::before, *::after {
    box-sizing: inherit;
 }
+.sanspuces {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+/* Mise en page
+   ========================================================================== */
 
  body {
     background-color: var(--couleur-secondaire);
@@ -242,13 +243,16 @@ button, input, optgroup, select, textarea {
     padding: 0.25rem;
  }
 
- [type=radio]:hover+label img{
-   filter: grayscale(0);
-}
- [type=radio]:hover+label img{
+ [type=radio]+label img{ /* correction du sélecteur */
    filter: grayscale(1);
 }
-
+ [type=radio]:hover+label img{
+   filter: grayscale(0); /* inversion des valeurs */
+}
+[type=radio]:hover+label,
+[type=radio]:focus+label{ /* ajout */
+    border: 1px solid darkgreen;
+}
 
 
  @media(min-width:600px){
@@ -257,6 +261,7 @@ button, input, optgroup, select, textarea {
     }
  }
 
+/* placer cette classe dans les utilitaires */
  .visuallyHidden{
     border: 0;
     clip: rect(0 0 0 0);
@@ -269,7 +274,7 @@ button, input, optgroup, select, textarea {
  }
 
  img{
-    max-width: 100;
+    max-width: 100%; /* il manquait l'unité % */
     display: block;
  }
 

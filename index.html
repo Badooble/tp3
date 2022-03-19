@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/_normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/tp3_typo.css">
+<!--    <link rel="stylesheet" href="css/typo.css">-->
     <title>TP3 - formulaire accessible</title>
     <link rel="icon" href="favicon.ico" />
 </head>
@@ -18,7 +18,7 @@
             <picture>
                 <source media="(max-width:599px)" srcset="images/bandeau_600.jpg">
                 <source media="(max-width:1200px)" srcset="images/bandeau_1200.jpg">
-                <img src="../images/bandeau_1200.jpg" alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le Matin en
+                <img src="images/bandeau_1200.jpg" alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le Matin en
                  semaine 5h30 au 95,1. Courez la chance de gagner un crédit voyage de 20 000$ ! 
                  Commandité par Ici Première, Montréal en Lumière, Bell et Voyages Traditours circuits et croisières.">
             </picture>
@@ -83,7 +83,7 @@
                             <label for="pays">Pays:</label>
                             <select name="pays" id="pays" required>
                                 <option value="">Province ou état</option>
-                                <optgroup label="Canada"></optgroup>
+                                <optgroup label="Canada">
                                 <option value="AB">Alberta</option>
                                 <option value="BC">British Columbia</option>
                                 <option value="MB">Manitoba</option>
@@ -97,7 +97,8 @@
                                 <option value="NT">Northwest Territories</option>
                                 <option value="NU">Nunavut</option>
                                 <option value="YT">Yukon</option>
-                                <optgroup label="États-Unis"></optgroup>
+                                </optgroup>
+                                <optgroup label="États-Unis">
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
                                 <option value="AZ">Arizona</option>
@@ -149,6 +150,7 @@
                                 <option value="WV">West Virginia</option>
                                 <option value="WI">Wisconsin</option>
                                 <option value="WY">Wyoming</option>
+                                </optgroup>
                             </select>
 
 
@@ -168,10 +170,8 @@
                             <p><label for="courriel">Courriel</label>
                                 <input type="email" name="courriel" id="courriel" required>
                             </p>
-                            <p class="message-erreur__courriel">Attention, le courriel comporte un ou plusieurs
-                                caractères
-                                interdits.</p>
-
+                            <p class="message-erreur__courriel">Attention, le courriel comporte un ou plusieurs caractères interdits.</p>
+                        </div>
                             <fieldset class="telephone ctnValidation">
                                 <legend>Téléphone (indicatif - numéro)</legend>
                                 <div class="rangee tt">
@@ -233,36 +233,39 @@
                         <fieldset class="question ctnValidation">
                             <legend class="h3">Lequel de ces monuments est un mausolée?</legend>
                             <ul class="sanspuces rangee">
-                                <li class="cols_4_de_12"> <input type="radio" name="monument" value="fchateaudif"
+                                <li class="cols_4_de_12">
+                                    <input type="radio" name="monument" value="fchateaudif"
                                         id="fchateaudif" class="visuallyHidden" required>
                                     <label for="fchateaudif">
                                         <picture>
-                                            <source media="(max-width:600px)" srcset="../images/chateaudIf-small.jpg">
-                                            <source media="(min-width:601px)" srcset="../images/chateaudIf.jpg">
-                                            <img src="../images/chateaudIf-small.jpg" alt="">
+                                            <source media="(max-width:600px)" srcset="images/chateaudIf-small.jpg">
+                                            <source media="(min-width:601px)" srcset="images/chateaudIf.jpg">
+                                            <img src="images/chateaudIf-small.jpg" alt="">
                                         </picture>
                                         <span>Le chateau d'If</span>
                                     </label>
                                 </li>
-                                <li class="cols_4_de_12"> <input type="radio" name="monument" value="palaisluxembourg"
+                                <li class="cols_4_de_12">
+                                    <input type="radio" name="monument" value="palaisluxembourg"
                                         id="palaisluxembourg" class="visuallyHidden">
                                     <label for="palaisluxembourg">
                                         <picture>
                                             <source media="(max-width:600px)"
-                                                srcset="../images/palaisluxembourg-small.jpg">
-                                            <source media="(min-width:601px)" srcset="../images/palaisluxembourg.jpg">
-                                            <img src="../images/palaisluxembourg-small.jpg" alt="">
+                                                srcset="images/palaisluxembourg-small.jpg">
+                                            <source media="(min-width:601px)" srcset="images/palaisluxembourg.jpg">
+                                            <img src="images/palaisluxembourg-small.jpg" alt="">
                                         </picture>
                                         <span>Le palais du Luxembourg</span>
                                     </label>
                                 </li>
-                                <li class="cols_4_de_12"> <input type="radio" name="monument" value="tajmahal"
+                                <li class="cols_4_de_12">
+                                    <input type="radio" name="monument" value="tajmahal"
                                         id="tajmahal" class="visuallyHidden">
                                     <label for="tajmahal">
                                         <picture>
-                                            <source media="(max-width:600px)" srcset="../images/tajmahal-small.jpg">
-                                            <source media="(min-width:601px)" srcset="../images/tajmahal.jpg">
-                                            <img src="../images/tajmahal-small.jpg" alt="">
+                                            <source media="(max-width:600px)" srcset="images/tajmahal-small.jpg">
+                                            <source media="(min-width:601px)" srcset="images/tajmahal.jpg">
+                                            <img src="images/tajmahal-small.jpg" alt="">
                                         </picture>
                                         <span>Le Taj Mahal</span>
                                     </label>
@@ -288,8 +291,9 @@
             <p></p>
             <button type="submit">Enregistrer</button>
             </form>
+            </div>
         </main>
-    </div>
+</div>
     <footer class="footer" role="copyright">
         <section class="copyright">
             <p class="copyright">
@@ -300,6 +304,4 @@
             </p>
         </section>
     </footer>
-</div>
-    </div>
 </body>
